@@ -3,7 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Footer(){
     return (
-        <footer>
+        <footer className="d-flex justify-content-center">
             <p>&copy; 2022 - Michael Sinn</p>
         </footer>
     );
