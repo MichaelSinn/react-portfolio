@@ -3,6 +3,7 @@ import About from "./About";
 import Header from "./Header";
 import Footer from "./Footer";
 import ProjectCard from "./ProjectCard";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const projects = [
     {
@@ -14,17 +15,23 @@ const projects = [
     }
 ];
 
-function Home(){
-    return(
+function Home() {
+    return (
         <div>
             <Header/>
-            <main>
-                <About/>
-                {projects.map(project =>{
-                    return (
-                        <ProjectCard project={project}/>
-                    );
-                })}
+            <main className="container-fluid">
+                <div className="row align-items-center">
+                    <section className="col">
+                        <About/>
+                    </section>
+                    <section className="col">
+                        {projects.map(project => {
+                            return (
+                                <ProjectCard project={project}/>
+                            );
+                        })}
+                    </section>
+                </div>
             </main>
             <Footer/>
         </div>
